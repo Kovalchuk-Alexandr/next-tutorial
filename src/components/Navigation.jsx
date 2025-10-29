@@ -9,6 +9,9 @@ const Navigation = () => {
 			<Link className="nav-link" href="/about">
 				About
 			</Link>
+			<Link className="nav-link" href="/users">
+				Users
+			</Link>
 			<Link className="nav-link" href="/contacts">
 				Contacts
 			</Link>
