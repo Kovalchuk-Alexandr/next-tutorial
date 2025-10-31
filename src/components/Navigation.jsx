@@ -1,9 +1,42 @@
-import Link from "next/link";
+'use client';
+
+import Link from 'next/link';
+import { useState } from 'react';
 
 const Navigation = () => {
+	const [activeItem, setActiveItem] = useState('Main');
+
+	const menuItems = [
+		{ name: 'Main', href: '/' },
+		{ name: 'About', href: '/about' },
+		{ name: 'Users', href: '/users' },
+		{ name: 'Contacts', href: '/contacts' },
+	];
+
+	const handleItemClick = (itemName) => {
+		// console.log('Item Name: ', itemName);
+		setActiveItem(itemName);
+	};
+
 	return (
 		<nav className="navigation">
-			<Link className="nav-link" href="/">
+			{menuItems.map((item) => (
+				<Link
+					key={item.name}
+					className={`nav-link ${
+						item.name === activeItem ? 'active' : ''
+					}`}
+					href={item.href}
+					onClick={(e) => {
+						// e.preventDefault();
+						handleItemClick(item.name);
+					}}
+				>
+					{item.name}
+				</Link>
+			))}
+			;
+			{/* <Link className="nav-link" href="/">
 				Main
 			</Link>
 			<Link className="nav-link" href="/about">
@@ -14,9 +47,9 @@ const Navigation = () => {
 			</Link>
 			<Link className="nav-link" href="/contacts">
 				Contacts
-			</Link>
+			</Link> */}
 		</nav>
 	);
-}
+};
 
 export default Navigation;

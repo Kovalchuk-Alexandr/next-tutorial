@@ -173,7 +173,7 @@ code pre {
 	transition: 150ms ease;
 }
 
-.nav-link:hover {
+.nav-link:hover, .nav-link.active {
 	color: var(--text);
 	background: rgba(255, 255, 255, 0.04);
 }
@@ -328,7 +328,7 @@ code pre {
 .card--user-details {
 	display: grid;
 	grid-template-columns: 140px 1fr;
-	row-gap: 8;
+	row-gap: 8px;
 }
 
 /* Элемент списка/карточки */
