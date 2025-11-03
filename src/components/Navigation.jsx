@@ -24,7 +24,7 @@ const Navigation = () => {
 				<Link
 					key={item.name}
 					className={`nav-link ${
-						item.name === activeItem ? 'active' : ''
+						activeItem === item.name ? 'active' : ''
 					}`}
 					href={item.href}
 					onClick={(e) => {
@@ -35,7 +35,7 @@ const Navigation = () => {
 					{item.name}
 				</Link>
 			))}
-			;
+
 			{/* <Link className="nav-link" href="/">
 				Main
 			</Link>

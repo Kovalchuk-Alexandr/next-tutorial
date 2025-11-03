@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import Button from '@/components/Button';
 
 export default function Home() {
   return (
@@ -10,6 +11,8 @@ export default function Home() {
 				создавать быстрые, масштабируемые и SEO-дружественные
 				приложения.
 			</p>
+			{/* Тестирование error.jsx */}
+			<Button />
 		</section>
   );
 }
