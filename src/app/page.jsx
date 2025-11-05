@@ -2,6 +2,12 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import Button from '@/components/Button';
 
+export const metadata = {
+	title: 'Next JS tutorial',
+	description: 'Learning Next JS',
+	keywords: 'business, next js, react',
+};
+
 export default function Home() {
   return (
 		<section className="content">

@@ -17,11 +17,15 @@ const inter = Inter({
 export const metadata = {
 	title: 'Next tutorial',
 	description: 'Next tutorial app',
+	openGraph: {
+		siteName: 'Tutorial',
+		description: 'Some text...',
+	},
 };
 
 export default function RootLayout({ children }) {
 	return (
-		<html lang="en" className={`${inter.variable}`}>
+		<html lang="ru" className={`${inter.variable}`}>
 			<body>
 				<div className="bg-grid"></div>
 				<Navigation />

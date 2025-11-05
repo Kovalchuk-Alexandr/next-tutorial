@@ -1,4 +1,4 @@
-"use client"
+'use client';
 
 const Button = () => {
 	return (
@@ -6,6 +6,6 @@ const Button = () => {
 			Click me (click event)
 		</button>
 	);
-}
+};
 
 export default Button;
