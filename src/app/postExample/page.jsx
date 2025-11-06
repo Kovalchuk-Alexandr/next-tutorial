@@ -1,21 +1,23 @@
-async function makePostRequest (params) {
-	const res = await fetch(`${process.env.NEXT_URL}/api/hello`, {
-		method: "POST",
-		headers: { 'Content-Type': 'application/json' },
-		body: JSON.stringify({name: 'Alex'})
-	});
+import { createHelloGreeting } from '@/lib/hello';
 
-	const data = await res.json();
-	return data;
-}
+// async function makePostRequest(params) {
+// 	const res = await fetch(`${process.env.NEXT_URL}/api/hello`, {
+// 		method: "POST",
+// 		headers: { 'Content-Type': 'application/json' },
+// 		body: JSON.stringify({name: 'Alex'})
+// 	});
 
-const PostExample = async () => {
-	const { message } = await makePostRequest();
+// 	const data = await res.json();
+// 	return data;
+// }
+
+const PostExample = () => {
+	const { message } = createHelloGreeting('Alex');
 
 	return (
 		<section className="content">
 			<h2 className="section-title">Post request</h2>
-			<code>
+			{/* <code>
 				<pre>
 					{`const res = await fetch(\`${process.env.NEXT_URL}/api/hello\`, {
 	method: "POST",
@@ -23,12 +25,12 @@ const PostExample = async () => {
 	body: JSON.stringify({name: 'Alex'})
 });`}
 				</pre>
-			</code>
+			</code> */}
 			{message && <p>{message}</p>}
 
 			{/* <ButtonGetRequest /> */}
 		</section>
 	);
-}
+};
 
 export default PostExample;

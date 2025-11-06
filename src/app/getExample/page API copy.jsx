@@ -1,18 +1,18 @@
 import ButtonGetRequest from "@/components/ButtonGetRequest";
-import { getHelloMessage } from '@/lib/hello';
+import { getHelloMessage } from "@/lib/hello";
 
 // Чтобы не выдавало ошибку при 'build'
 // export const dynamic = 'force-dynamic';
 
-// async function getMessageFromAPI () {
-// 	const res = await fetch(`${process.env.NEXT_URL}/api/hello`);
-// 	// const res = await fetch(`http://localhost:3000/api/hello`);
+async function getMessageFromAPI () {
+	const res = await fetch(`${process.env.NEXT_URL}/api/hello`);
+	// const res = await fetch(`http://localhost:3000/api/hello`);
 
-// 	return res.json();
-// }
+	return res.json();
+}
 
-const GetExample = () => {
-	const { message } = getHelloMessage();
+const GetExample = async () => {
+	const { message } = await getMessageFromAPI();
 
 	return (
 		<section className="content">
@@ -22,6 +22,6 @@ const GetExample = () => {
 			<ButtonGetRequest />
 		</section>
 	);
-};
+}
 
 export default GetExample;
