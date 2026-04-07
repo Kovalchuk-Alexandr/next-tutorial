@@ -1,3 +1,17 @@
+# NextJS tutorial project
+
+- installation and configuration of the project
+- routing and page creation
+- navigation settings
+- dynamic routes
+- working with images, fonts and templates for different application states (loading, 404 errors and others)
+- API using
+- POST/GET - requests
+
+***Deployment on Vercel***: https://vercel.com/kovalchuk-alexandrs-projects/next-tutorial/sv3NW3DfmbTZn1nR19gUapRD29B2
+
+[See Demo](https://next-tutorial-2505.vercel.app/)
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
